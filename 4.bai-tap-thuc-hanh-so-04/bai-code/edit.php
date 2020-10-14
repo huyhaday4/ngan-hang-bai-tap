@@ -40,8 +40,11 @@ include("include/header.php");
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" class="form-control bg-success" name="sbmSave" id="sbmSave" value="Save">
+                        <button type="submit" class="bg-success text-white" name="btnSave" id="btnSave">
+                            Save
+                        </button>
                     </div>
+
                 </form>
             </div>
         </div>

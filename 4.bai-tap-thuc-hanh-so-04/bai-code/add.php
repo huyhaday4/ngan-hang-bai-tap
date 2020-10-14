@@ -8,6 +8,7 @@ include("include/header.php")
             <div class="col-md-12">
                 <form action="" method="POST">
                     <h1>Create Record</h1>
+
                     <div class="form-group">
                         <label for="txtName">Name</label>
                         <input type="text" class="form-control" name="txtName" id="txtName">
@@ -38,13 +39,14 @@ include("include/header.php")
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="form-control bg-success" name="btnSave" id="btnSave">
+                        <button type="submit" class="bg-success text-white" name="btnSave" id="btnSave">
                             Save
                         </button>
-                        <button type="cancel" class="form-control bg-light" name="btnCancel" id="btnCancel">
-                            Cancel
+                        <button type="cancel" class="bg-light " name="btnCancel" id="btnCancel">
+                            <a class="btnBack" href="index.php">Cancel</a>
                         </button>
                     </div>
+
                 </form>
             </div>
         </div>
