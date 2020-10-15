@@ -1,5 +1,17 @@
 <?php
-include("include/header.php")
+include("include/header.php");
+if (isset($_POST['btnSave'])) {
+    include("include/connection.php");
+    require("include/function.php");
+    $Name = $_POST['txtName'];
+    $Discription = $_POST['txtDescription'];
+    $Salary = $_POST['txtSalary'];
+    $Gender = $_POST['txtGender'];
+    $Birthday = $_POST['txtBirthday'];
+
+    echo $name, $description, $salary, $gender, $birthday, $created_at;
+    addEmployee($name, $description, $salary, $gender, $birthday, $created_at);
+}
 ?>
 
 <body>
@@ -25,7 +37,7 @@ include("include/header.php")
                     </div>
 
                     <div class="form-group">
-                        <label for="txtGender">Gender</label>
+                        <label>Gender</label>
                         <br>
                         <input type="radio" class="gender" checked="">
                         <label for="txtGender">Male</label>
@@ -39,9 +51,7 @@ include("include/header.php")
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="bg-success text-white" name="btnSave" id="btnSave">
-                            Save
-                        </button>
+                        <input type="submit" class="bg-success text-white" name="btnSave" value="Save">
                         <button type="cancel" class="bg-light " name="btnCancel" id="btnCancel">
                             <a class="btnBack" href="index.php">Cancel</a>
                         </button>

@@ -26,8 +26,16 @@ function deleteEmployee($id)
     else
         return FALSE;
 }
-function addEmployee($id){
+function addEmployee($name,$description,$salary,$gender,$birthday, $created_at){
     global $conn;
-    $sql= "INSERT INTO employees (`id`, `name`, `description`, `gender`, `salary`, `birthday`, `created_at`) VALUES ([id],[name],[description],[gender],[salary],[birthday],[created_at])";
-    $result = mysql_query($sql, $conn ) or die (mysql_error());
+    $sql= "INSERT INTO employees (`name`, `description`, `gender`, `salary`, `birthday`, `created_at`) VALUES ('$name','$description','$salary','$gender','$birthday','$created_at')";
+    $result = mysqli_query($sql, $conn);
+    if ($result)
+    {
+        echo "Insert thành công :>";
+    }
+    else
+    {
+        echo "Insert thất bại";
+    }
 }
