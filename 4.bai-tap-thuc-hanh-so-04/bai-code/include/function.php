@@ -26,3 +26,8 @@ function deleteEmployee($id)
     else
         return FALSE;
 }
+function addEmployee($id){
+    global $conn;
+    $sql= "INSERT INTO employees (`id`, `name`, `description`, `gender`, `salary`, `birthday`, `created_at`) VALUES ([id],[name],[description],[gender],[salary],[birthday],[created_at])";
+    $result = mysql_query($sql, $conn ) or die (mysql_error());
+}

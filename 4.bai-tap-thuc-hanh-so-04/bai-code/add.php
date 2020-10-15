@@ -35,7 +35,7 @@ include("include/header.php")
 
                     <div class="form-group">
                         <label for="txtBirthday">Birthday</label>
-                        <input type="date" class="form-control" value="2020-10-15" min="1000-01-01" max="3000-12-31">
+                        <input type="date" class="form-control" value="" min="1000-01-01" max="3000-12-31">
                     </div>
 
                     <div class="form-group">
